@@ -14,7 +14,6 @@ export PYSPARK_DRIVER_PYTHON=$(which python)
 
 unset PYSPARK_PYTHON
 
-# Clean up previous data if it exists
 echo "Cleaning up previous data..."
 hdfs dfs -test -e "$HDFS_PATH" && hdfs dfs -rm "$HDFS_PATH" && echo "Removed $HDFS_PATH"
 hdfs dfs -test -e /data && hdfs dfs -rm -r /data && echo "Removed /data directory"
