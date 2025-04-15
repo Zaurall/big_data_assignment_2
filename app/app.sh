@@ -16,11 +16,13 @@ pip install -r requirements.txt
 venv-pack -o .venv.tar.gz
 
 # Collect data
-bash prepare_data.sh
+# Change a.parquet to the name of your parquet file
+bash prepare_data.sh a.parquet
 
 
 # Run the indexer
-bash index.sh data/sample.txt
+bash index.sh
 
+chmod +x search.sh
 # Run the ranker
-bash search.sh "this is a query!"
+bash search.sh "how to build nuclear bomb?"
